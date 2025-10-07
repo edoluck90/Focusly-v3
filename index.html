@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#21808D" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+  <title>Focusly ADHD</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1 class="app-title">Focusly ADHD</h1>
+    <div class="profile-chip" id="profileChip"></div>
+  </header>
+
+  <main id="authView" class="view">
+    <section class="card">
+      <h2>Profili locali</h2>
+      <div id="profilesList"></div>
+      <div class="row">
+        <input id="newProfileName" placeholder="Nome profilo (es. Edo)" />
+        <button id="createProfileBtn">Crea profilo</button>
+      </div>
+    </section>
+  </main>
+
+  <main id="appView" class="view hidden">
+    <section class="stats">
+      <div><strong>XP</strong> <span id="xpVal">0</span></div>
+      <div><strong>Livello</strong> <span id="lvlVal">1</span></div>
+      <div><strong>Settimanali</strong> <span id="wkVal">0/15</span></div>
+    </section>
+
+    <section class="grid">
+      <div class="q q1">
+        <h3>🔴 Urgente & Importante</h3>
+        <div class="sub">Fai Subito</div>
+        <ul id="q1"></ul>
+        <button class="add" data-q="q1">+ Task</button>
+      </div>
+      <div class="q q2">
+        <h3>🟢 Importante & Non Urgente</h3>
+        <div class="sub">Pianifica</div>
+        <ul id="q2"></ul>
+        <button class="add" data-q="q2">+ Task</button>
+      </div>
+      <div class="q q3">
+        <h3>🟠 Urgente & Non Importante</h3>
+        <div class="sub">Pianifica nei prossimi giorni</div>
+        <ul id="q3"></ul>
+        <button class="add" data-q="q3">+ Task</button>
+      </div>
+      <div class="q q4">
+        <h3>⚪ Non Urgente & Non Importante</h3>
+        <div class="sub">Pianifica senza fretta</div>
+        <ul id="q4"></ul>
+        <button class="add" data-q="q4">+ Task</button>
+      </div>
+    </section>
+
+    <section class="health">
+      <div class="banner" id="waterBanner">💧 Bevi acqua • Tocca per segnare fatto</div>
+      <div class="banner" id="bathBanner">🚻 Pausa bagno • Tocca per segnare fatto</div>
+    </section>
+
+    <section class="settings card">
+      <h2>Impostazioni</h2>
+      <button id="enableNotifBtn">🔔 Attiva notifiche ogni 6 ore</button>
+      <button id="installBtn" class="secondary" disabled>➕ Installa come App</button>
+      <button id="switchProfileBtn" class="secondary">👤 Cambia profilo</button>
+    </section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
