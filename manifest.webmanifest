@@ -2,19 +2,15 @@
 {
   "name": "Focusly ADHD",
   "short_name": "Focusly",
-  "id": "/",
-  "start_url": "/",
-  "scope": "/",
+  "id": ".",
+  "start_url": ".",
+  "scope": ".",
   "display": "standalone",
   "theme_color": "#21808D",
   "background_color": "#FCFCF9",
   "description": "Matrice di Eisenhower con profili locali, reminder e PWA.",
   "icons": [
-    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
-  ],
-  "shortcuts": [
-    { "name": "Aggiungi Task", "url": "/#add", "description": "Crea nuovo task velocemente" }
-  ],
-  "categories": ["productivity", "health", "education"]
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
 }
